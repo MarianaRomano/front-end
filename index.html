@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <!-- mi estilo css-->
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="shortcut icon" href="assets/img/marijpeg.jpeg" type="image/x-icon">
 </head>
 <body>
     <!--esto es la navbar-->
@@ -27,28 +28,32 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="#"><a href="https://github.com/MarianaRomano"><i class="fa-brands fa-github"></i></a></a>
                   </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Acerca de mí</a>
+                <a class="nav-link" href="#"><a href="https://www.linkedin.com/in/mariana-alejandra-romano-8a9714225/"><i class="fa-brands fa-linkedin"></i></a></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Formación</a>
+                <a class="nav-link" href="#"><i class="fa-solid fa-user" class="btn" data-bs-toggle="modal" data-bs-target="#loguin">
+                </i></a>
               </li>
            </div>
         </div>
       </nav>
-       <!-- Creamos el banner con la imagen -->
+
+        <!-- Creamos el banner con la imagen -->
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
+             <!-- Boton editar carousel -->
+           <button type="button" class="btn" data-bs-toggle="modal3" data-bs-target="#modal3">
+            <i class="fa-solid fa-pencil"></i>
+             </button>
             <img src="assets/img/escritorio.jpeg" class="d-block w-100" alt="computadora escritorio en la playa" width="200px" height="400px">
           </div>
         </div>
       </div>
+                      
    
  <!-- Agregamos un container para el contenido de la página -->
  <div class="container1">
@@ -60,15 +65,27 @@
             <a class="foto-perfil" href="#">
                 <img src="assets/img/marijpeg.jpeg" class="rounded-circle foto-perfil" alt="imagen de mariana romano">
               </a>
+                        <!-- Boton editar imagen perfil -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editarImg">
+                          <i class="fa-solid fa-pencil"></i>
+                           </button>
         </div>
+<!-- texto acerca de mi -->
         <div class="col-md-6">
             <p class="acerca_perfil" >Mi nombre es Mariana Alejandra Romano, vivo en Argentina, Buenos Aires, Partido de la Costa. Tengo 40 años, soy Community Manager, diseñadora digital, Marketing digital y Developer full stack Jr. 
                 Soy una persona apasionada por la tecnologìa y las redes sociales.
-        Soy muy observadora y creativa, tengo mentalidad de aprendisaje contìnuo y siempre estoy buscando formas de mejorar mis habilidades. </p>
+        Soy muy observadora y creativa, tengo mentalidad de aprendizaje contínuo y siempre estoy buscando formas de mejorar mis habilidades. </p>
         </div>
-      
-      
-</div>
+        <!-- Boton editar info perfil -->
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editarInfo">
+          <i class="fa-solid fa-pencil"></i>
+           </button>
+           
+             <!-- Boton eliminar perfil -->
+             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+              <i class="fa-solid fa-trash"></i>
+          </button>
+      </div>
 </div>
 </section>
 
@@ -80,19 +97,35 @@
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="cursos_item caja">
                     <ul class="cursos_lista">
-                        <li class="cursos_imagen"><img src="assets/img/logo escuela sec.jfif" class="img-fluid"></li>
+                        <li class="cursos_imagen"><img src="assets/img/escuela.jpeg" class="img-fluid"></li>
                         <li class="cursos_titulo"><h4>Perito Mercantil con especializaciòn Contable e Impositiva</h4></li>
                         <li class="cursos_subtitulo"><p>Buenos Aires - Escuela de Comercio nª12 D.E 21</p></li>
                     </ul>
+                    <!-- Boton editar formacion -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                      <i class="fa-solid fa-pencil"></i>
+                       </button>
+                         <!-- Boton eliminar formacion -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+              <i class="fa-solid fa-trash"></i>
+          </button>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="cursos_item caja">
                     <ul class="cursos_lista">
-                        <li class="cursos_imagen"><img src="assets/img/community.jpeg" class="img-fluid"></li>
+                        <li class="cursos_imagen" class="img-fluid"><img src="assets/img/community.jpeg" class="img-fluid"></li>
                         <li class="cursos_titulo"><h4>Curso de Community Manager</h4></li>
                         <li class="cursos_subtitulo"><p>Academia Numen - 2021</p></li>
                     </ul>
+                    <!-- Boton editar formacion -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                      <i class="fa-solid fa-pencil"></i>
+                       </button>
+                         <!-- Boton eliminar formacion -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+              <i class="fa-solid fa-trash"></i>
+          </button>
                 </div>
             </div>
         </div>
@@ -101,46 +134,310 @@
 
     <!-- Creamos una sección para los skills -->
     <section class="skillssection">
-        <h2 class="titulos-pagina" id="skills">Skills</h2>
-        <div class="skills">
-            
-            <div class="skills_item caja">
-                <ul class="skills_lista">
-                    <li class="skills_imagen"> <i class="fa-brands fa-html5"></i></li>
-                    <li class="skills_titulo"><h4>HTML 5</h4></li>
-                </ul>   
-                <div class="progress-circle progress-90"><span>90</span></div> 
-                </div>
-                
-
-            <div class="skills_item caja">
-                <ul class="skills_lista">
-                    <li class="skills_imagen"><i class="fa-brands fa-html5"></i></li>
-                    <li class="skills_titulo"><h4>CSS 5</h4></li>
-                </ul>
-                <div class="progress-circle progress-90"><span>90</span></div>
-            </div>
-            
-
-                 <div class="skills_item caja">
-                    <ul class="skills_lista">
-                         <li class="skills_imagem"><i class="fa-brands fa-js"></i></li>
-                        <li class="skills_titulo"><h4>Javascript</h4></li>
-                    </ul>
-                    <div class="progress-circle progress-85"><span>85</span></div> 
+      <h2 class="titulos-pagina" id="skills">Skills y habilidades Blandas</h2>
+         <div class="container-fluid">
+            <div class="row">
+              <!-- Inicio de la caja-->
+              <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4><i class="fa-brands fa-html5"></i> HTML 5</h4>
+                  <div class="progress-circle progress-90"><span>90</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
+               <!-- Inicio de la caja-->
+               <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4><i class="fa-brands fa-java"></i> Java</h4>
+                  <div class="progress-circle progress-90"><span>80</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
 
-                     <div class="skills_item caja">
-                        <ul class="skills_lista">
-                             <li class="skills_imagem"><i class="fa-brands fa-js"></i></li>
-                            <li class="skills_titulo"><h4>Bootstrap</h4></li>
-                        </ul>
-                        <div class="progress-circle progress-80"><span>80</span>
-                     </div>
-        </div>
-    </section>
+               <!-- Inicio de la caja-->
+               <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4><i class="fa-brands fa-css3-alt"></i> Css</h4>
+                  <div class="progress-circle progress-90"><span>90</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
 
- <!-- Creamos una sección para la experiencia -->
+               <!-- Inicio de la caja-->
+               <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4><i class="fa-brands fa-github"></i></i>Github</h4>
+                  <div class="progress-circle progress-90"><span>90</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
+               <!-- Inicio de la caja-->
+               <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4><i class="fa-brands fa-html5"></i> Bootstrap</h4>
+                  <div class="progress-circle progress-90"><span>80</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
+               <!-- Inicio de la caja-->
+               <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4><i class="fa-solid fa-database"></i>Base de datos</h4>
+                  <div class="progress-circle progress-90"><span>90</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
+               <!-- Inicio de la caja-->
+               <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4><i class="fa-brands fa-angular"></i>Angular</h4>
+                  <div class="progress-circle progress-60"><span>60</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
+
+               <!-- Inicio de la caja-->
+               <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4><i class="fa-solid fa-leaf"></i>SpringBoot</h4>
+                  <div class="progress-circle progress-90"><span>90</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                    
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
+
+                <!-- Inicio de la caja-->
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                  <div class="skills_item"> 
+                    <h4>Responsabilidad</h4>
+                    <div class="progress-circle progress-100"><span>100</span></div> 
+                    <div class="container text-center">
+                      <div class="row">
+                        <div class="col-6">
+                          <!-- Boton editar skill -->
+                          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                            <i class="fa-solid fa-pencil"></i>
+                          </button>
+                        </div>
+                        <div class="col-6">
+                        <!-- Boton eliminar skill -->
+                          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- fin de la caja -->
+                  <!-- Inicio de la caja-->
+              <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4>Liderazgo</h4>
+                  <div class="progress-circle progress-90"><span>90</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
+
+                <!-- Inicio de la caja-->
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                  <div class="skills_item"> 
+                    <h4>Creatividad</h4>
+                    <div class="progress-circle progress-90"><span>95</span></div> 
+                    <div class="container text-center">
+                      <div class="row">
+                        <div class="col-6">
+                          <!-- Boton editar skill -->
+                          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                            <i class="fa-solid fa-pencil"></i>
+                          </button>
+                        </div>
+                        <div class="col-6">
+                        <!-- Boton eliminar skill -->
+                          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- fin de la caja -->
+                  <!-- Inicio de la caja-->
+              <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center mt-4">
+                <div class="skills_item"> 
+                  <h4>Trabajo en equipo</h4>
+                  <div class="progress-circle progress-90"><span>90</span></div> 
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- Boton editar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                      </div>
+                      <div class="col-6">
+                      <!-- Boton eliminar skill -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de la caja -->
+            </div>
+          </div>
+        
+</section>
+
+
+ <!-- Creamos una sección para la experiencia (PROYECTOS REALIZADOS) -->
     <div class="experiencia">
       <div class="experiencia__sobre">
           <h2 class="experiencia__sobre___titulo">Challenge Ahorcado</h2>
@@ -150,7 +447,7 @@
               <li class="experiencia__sobre___itens"><a class="experiencia__link--demo" href="https://marianaromano.github.io/challengeonecodificador2/"><button class="experiencia__boton--demo">Ver demo</button></a></li>
           </ul>
       </div>
-      <img class="experiencia__imagen" src="assets/img/challenge 1.jpeg">
+      <img class="experiencia__imagen" class="img-fluid" src="assets/img/challenge 1.jpeg" alt="imagen del proyecto">
   </div>
 
   </div>   
@@ -163,7 +460,7 @@
               <li class="experiencia__sobre___itens"><a class="experiencia__link--demo" href="https://marianaromano.github.io/challengeonejuegoahorcado2/"><button class="experiencia__boton--demo">Ver demo</button></a></li>
           </ul>
       </div>
-      <img class="experiencia__imagen" src="assets/img/challenge 2.jpeg">
+      <img class="experiencia__imagen" class="img-fluid" src="assets/img/challenge 2.jpeg" alt="imagen del proyecto">
   </div>
 
 </section>
@@ -177,6 +474,150 @@
           <p>2023</p>
       </div>
   </section>
+
+ <!-- Modal editar skill html-->
+<div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="modal-editar" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-editar">EDITAR</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Ingrese el texto nuevo
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 eliminar skill html-->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal2">Eliminar Skill</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Está seguro que quiere eliminar este archivo?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sí</button>
+          <button type="button" class="btn btn-primary">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal editar skill css-->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal1">Modal 1</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        esto es una ventana modal
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 eliminar skill css-->
+<div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="modal2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="eliminar">Eliminar Archivo</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Está seguro que quiere eliminar este archivo?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si</button>
+          <button type="button" class="btn btn-primary">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal editar img perfil-->
+<div class="modal fade" id="modal-editarImg" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModal">EDITAR</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ingrese la imagen nueva
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+     <!-- Modal editar usuario loguin-->
+     <div class="modal fade" id="loguin" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loguin">Iniciar Sesión</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" id="staticEmail" value="email@dominio.com">
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+         <!-- Modal editar info perfil-->
+<div class="modal fade" id="modal-editarInfo" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModal">EDITAR</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ingrese el texto nuevo
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 
